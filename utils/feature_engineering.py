@@ -6,11 +6,11 @@ def getFeatureImportance(model, x_data):
     Takes a model and features data. Returns a pandas dataframe with the
      features ranked by Gini from most important to least.
     '''
-    feature_importances = pd.DataFrame(model.feature_importances_,
-                                index=x_data.columns,
-                                columns= ['importance']).sort_values('importance',
-                                ascending=False)
-    return feature_importances
+    imprtnc = pd.DataFrame(model.feature_importances_,
+                           index=x_data.columns,
+                           columns=['importance']).sort_values('importance',
+                                                               ascending=False)
+    return imprtnc
 
 
 def n_Features(feature_rankings, n, head=True):
