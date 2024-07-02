@@ -24,7 +24,7 @@ To achieve this objective, it was further broken down into the following 4 techn
 
 ## Main Insights
 
-From the exploratory data analysis, we found out that anomalous behavviour patterns are cahracterised by:
+From the exploratory data analysis, I found:
 
 - The target variable, Revenue, is imbalanced.
 - All the numeric features are right skewed.
@@ -32,11 +32,11 @@ From the exploratory data analysis, we found out that anomalous behavviour patte
 
 ## Engineered Features
 
-Using a decision tree, the most important features ( based on Gini score) to be left in model were PageValues, Administrative_Duration, ProductRelated_Duration, and BounceRates.
+Using a decision tree, the most important features (based on Gini score) to be left in model were PageValues, Administrative_Duration, ProductRelated_Duration, and BounceRates.
 
 As a result of this feature engineering work, the Precision-Recall AUC increased by 9% and the ROC AUC increased by 9%. This is in comparing the initial tree model used for feature selection and the random forest model built with under sampling and cross validation.
 
-## Model Selection
+## Model Selection and Results
 
 Three sets of models were compared using ROC AUC and PR curve AUC because the target variable is binary and imbalanced.
 
